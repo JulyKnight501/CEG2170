@@ -19,7 +19,7 @@ int main () {
         printf("You are correct! :-)\n");
     } else if (g <= 0 || g >= 100){
         printf("You are out of bounds.\n");
-    } else if ((g = a + 5) || (g = a - 5)){
+    } else if (g < a + 5 && g > a - 5){
         printf("You are getting warmer.\n");
     } else {
         printf("You are getting colder.\n");
