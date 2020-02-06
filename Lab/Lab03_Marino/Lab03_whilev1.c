@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /*
 *   Age evaluation code with loop.
@@ -20,6 +21,7 @@ int main () {
     //Enter an age and store the int.
     printf("Enter an age you would like to evaluate: \n");
     scanf("%f", &age);
+    fflush(stdin); // flushes buffer char of 'enter'
 
     // If statements for possible output based off age input
     if (age < 1){
