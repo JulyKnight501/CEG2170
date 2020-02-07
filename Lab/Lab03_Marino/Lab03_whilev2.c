@@ -33,22 +33,31 @@ int main () {
             printf("You're getting old!\n");
         }
         
-        // Asks user if they want to evaluate another age
-        printf("Would you like to to enter another age? (y/n):\n"); 
-        // Gets char from user input
-        ans = getchar();
-        fflush(stdin); // flushes buffer char of 'enter'
 
-        // Based off input if "n" the program ends
-        // Issue arrises with the else if of other character
-            // It prints its staement then ends program
-            // want to go back and ask "...enter another age" again
-        if(ans == 'n'){
-            printf("Thank you for using the age evaluator.\n");
-            break;
-        } else if (ans != 'y' && ans != 'n'){
-            printf("You have entered an invalid char.\n");
-    
+        char c = 'y';
+        while(c == 'y'){
+            // Asks user if they want to evaluate another age
+            printf("Would you like to to enter another age? (y/n):\n"); 
+            // Gets char from user input
+            c = getchar();
+            fflush(stdin);
+           
+        
+            // Based off input if "n" the program ends
+            // Issue arrises with the else if of other character
+                // It prints its staement then ends program
+                // want to go back and ask "...enter another age" again
+            if(c == 'y'){
+                ans = c;
+                break;
+            } else if(ans == 'n'){
+                printf("Thank you for using the age evaluator.\n");
+                break;
+            } else if (ans != 'y' && ans != 'n'){
+                printf("You have entered an invalid char.\n");
+                c = 'y';
+        
+            }
         }
     }
     

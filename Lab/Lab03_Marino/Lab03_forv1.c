@@ -10,9 +10,6 @@
 *   Print out a graph of weight loss per month 
 */
 
-
-
-
 int main () {
 
     int i; // storage for weight

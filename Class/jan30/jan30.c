@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /*
 *   Currently CEG2170 Template
@@ -18,6 +19,9 @@
 
 int main () {
 
+    
+    char c = while(getchar(!= '\n'));
+    printf("%c", c);
 
     return 0;
 }
