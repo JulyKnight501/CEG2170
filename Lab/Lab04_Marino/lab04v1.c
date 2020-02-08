@@ -19,7 +19,6 @@ float num2;
 *   Welcomes user and displays codes for mathmatical calculation.
 *   Run check to see if a valid input. 
 *   Then goes through if staesments depending on calculation type.
-*   
 */
 
 int main () {
@@ -52,9 +51,10 @@ int main () {
         scanf("%f", &num1);
         printf("Enter second number:\n");
         scanf("%f", &num2);
+        fflush(stdin);
 
         // Shows number variable values
-        printf("Num1 = %f\nNum2 = %f\n", num1, num2);
+        //printf("Num1 = %f\nNum2 = %f\n", num1, num2);
 
         // If else ladder to determain which function to use based off mathmatical calculation shown
         if(math == 'a'){
@@ -69,12 +69,11 @@ int main () {
             mod_nums();
         }
 
-        // asks is user would like to run another calculationn
-        fflush(stdin);
+    
+        // asks is user would like to run another calculation
         printf("Would you like to make another calculation?(y/n):\n");
         ans = getchar();
         fflush(stdin);
-        
     }
 
     printf("Thank you for using the calculator!\n");
@@ -116,7 +115,7 @@ int div_nums(){
 
 // Funtion for modulo of numbers
 int mod_nums(){
-    //float ans_mod = num1 % num2;
-    //printf("%f % %f = %f\n", num1, num2, ans_mod);
-   // return 0;
+    int ans_mod = (int)num1 % (int)num2;
+    printf("%f mod %f leaves a remainder of %d\n", num1, num2, ans_mod);
+    return 0;
 }
