@@ -11,6 +11,7 @@ int mult_nums();
 int div_nums();
 int mod_nums();
 
+// global variables
 float num1;
 float num2;
 
@@ -57,16 +58,26 @@ int main () {
         //printf("Num1 = %f\nNum2 = %f\n", num1, num2);
 
         // If else ladder to determain which function to use based off mathmatical calculation shown
-        if(math == 'a'){
+        switch (math){
+            case 'a':
             add_nums();
-        } else if ( math == 's'){
+            break;
+
+            case 's':
             subtract_nums();
-        } else if(math == 'm'){
+            break;
+
+            case 'm':
             mult_nums();
-        } else if(math == 'd'){
+            break;
+        
+            case 'd':
             div_nums();
-        } else if(math == 'o'){
+            break;
+
+            case 'o':
             mod_nums();
+            break;
         }
 
     
