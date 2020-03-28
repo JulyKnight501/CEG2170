@@ -10,7 +10,8 @@
 #	the PROGNAME variable needs to be helloworld
 #	The rest of this "script" will plug the variable in appropriately
 #	To reference your code file
-PROGNAME = lab07_v1
+PROGNAME = lab07_v2
+
 #EXENAME is the name of the executable file to run your code
 #   IF YOU CHANGE THIS, also change this line in launch.json
 #	"program": "${workspaceFolder}/program"
