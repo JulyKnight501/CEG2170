@@ -16,12 +16,18 @@ void print_array_char(char [], int);
 // main funtion of hang man
 int main (void) {
     // sets up variables used for the program.
-    int game_rounds = 15;
+    int game_rounds = 14;
     int round_count = 0;
     char game[] = "college";
     int game_size = strlen(game); 
     char guess[game_size];
 
+       // sets up the guess '*' line
+        for(int i = 0; i < game_size; i++){
+            guess[i] = '*';
+        }
+
+        printf("Lets play Hangman!\n");
 
         // while has two conditions
         // checking to see if game is same as guess
@@ -51,6 +57,7 @@ int main (void) {
             if(counter > 0){   
                 printf("\nGood Job!\n");
                 printf("'%c' is used %d time(s)\n", char_guess, counter);
+                print_array_char(guess, game_size);
             } else {
                 printf("\n'%c' is not in the word :-(\nPlease try again.\n", char_guess);
             }

@@ -121,15 +121,15 @@ int main (void) {
     char guess[guess_size];
      // random word list
     char word_list[25][15] = {"print", "inflame", "imminent", "previous", "savor",
-                          "surprise", "impartial", "address", "inquire", "encourage",
-                          "sneeze", "swift", "damaging", "function", "unnatural",
-                          "cumbersome", "invention", "excited", "zephyr", "incompetent",
-                          "forgetful", "humiliate", "class", "wright", "state"};
+                                "surprise", "impartial", "address", "inquire", "encourage",
+                                "sneeze", "swift", "damaging", "function", "unnatural",
+                                "cumbersome", "invention", "excited", "zephyr", "incompetent",
+                                "forgetful", "humiliate", "class", "wright", "state"};
     int r_word = r_num();
     printf("%d\n",r_word);
 
     game_size = strlen(word_list[r_word]);
-    guess_size = strlen(game);
+    guess_size = game_size;
     printf("%d\n", game_size);
     for(int i = 0; i < game_size; i++){
         printf("%c", word_list[r_word][i]);
@@ -140,7 +140,8 @@ int main (void) {
 
     printf("the game_size is: %d\n", game_size);
     printf("the guess_size is: %d\n", guess_size);
-    printf("the string game is: %s\n", game);
+    printf("the string game is: ");
+    print_array_char(game, game_size);
     
     //print_array_2d_char(word_list, game_size, r_word);
 
