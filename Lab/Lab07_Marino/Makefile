@@ -16,7 +16,7 @@ PROGNAME = lab07_v2
 #   IF YOU CHANGE THIS, also change this line in launch.json
 #	"program": "${workspaceFolder}/program"
 #	else the debugger will throw an error
-EXENAME = program
+EXENAME = program.exe
 
 #This creates the executable file (what you use to run your code)
 #	Essentially, it uses a command to use the MinGW compiler to 
